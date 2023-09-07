@@ -1,0 +1,94 @@
+<div class="container screen-space">
+    <h1>My collections</h1>
+    <p><a class="btn" href="/me/trash/collections"><i class="bi bi-trash"></i> Thùng rác</a></p>
+    <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Tên sản phẩm</th>
+            <th scope="col">Màu sắc</th>
+            <th scope="col" colspan="2">Thời gian tạo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each collections}}
+            <tr>
+                <th scope="row">{{sum @index 1}}</th>
+                <td>{{this.name}}</td>
+                <td>{{this.color}}</td>
+                <td>{{this.createdAt}}</td>
+                <td>
+                    <a class="btn btn-link" href="/collections/{{this._id}}/edit">Sửa</a>
+                    <a class="btn btn-link" href="" data-bs-toggle="modal" data-bs-id="{{this._id}}" data-bs-target="#delete-collection-modal">Xóa</a>
+                </td>
+            </tr>
+            {{else}}
+            <tr>
+              <td colspan="10">
+                null product
+              </td>
+              <a href="/collections/create">Upload more products</a>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+
+{{!-- Confirm delete collection --}}
+<div class="modal fade" id="delete-collection-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Delete collection?</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure to delete it?
+      </div>
+      <div class="modal-footer">
+        <button id="btn-delete-collection" type="button" class="btn btn-danger">Delete</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- Delete hidden form --}}
+<form name="delete-collection-form" method="POST">
+  
+</form>
+
+{{!-- Delete hidden form --}}
+<form name="delete-collection-form" method="POST">
+  
+</form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        var collectionId;
+        var deleteForm = document.forms['delete-collection-form'];
+        var btnDeleteCollection = document.getElementById('delete-collection-modal');
+        
+        //When dialog confirm clicked
+        btnDeleteCollection.addEventListener('show.bs.modal', function (event) {
+                var button = event.relatedTarget
+                collectionId = button.getAttribute('data-bs-id') 
+
+                
+        })
+        /*$('#delete-collection-modal').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget)
+                collectionId = button.data('id') 
+        });*/
+      
+        btnDeleteCollection.onclick = function() {
+            deleteForm.action = '/collections/' + collectionId + '?_method=DELETE';
+            deleteForm.submit();
+
+        }
+    });
+
+   
+</script>

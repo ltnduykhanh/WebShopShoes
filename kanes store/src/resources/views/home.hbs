@@ -1,0 +1,76 @@
+<main>
+    <div class="body container-fluid">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active bg-dark" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="bg-dark" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="bg-dark" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                <img src="https://file.hstatic.net/200000033444/file/thiet_ke_chua_co_ten-28_2d360020b74f4d0780b5f15df2c8bb80.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://file.hstatic.net/200000033444/file/banner_trang_chu_06602a1b8e8a4ae0bd4c070bfa377547.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://file.hstatic.net/200000033444/file/ban1_2b2ff2c8da9d429191b3023d1187bfba.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+
+        <!-- PRODUCT NỔI BẬT -->
+        <div class="container-fluid pt-5">
+            <h5 class="text-center"><a href="" class="text-decoration-none text-uppercase text-dark fs-4 my-5">The gent wolf</a></h5>
+            <div class="row">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-innner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                {{#each collections}}
+                                <div class="col-md-4 mb-3">
+                                    <div class="card border-0">
+                                        <a href="collections/{{this.slug}}"><img src="{{this.image1}}" class="card-img-top" alt="..."></a>
+                                        <div class="card-body text-center">
+                                            <h5 class="text-uppercase">{{this.name}}</h5>
+                                            <p>{{this.price}}đ</p>
+                                            <p class="card-text">hoặc <b>566,000đ</b> x3 với Fundiin</p>
+                                        </div>
+                                    </div>
+                                </div> 
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        {{!-- IMG QUẢNG CÁO --}}
+        <div class="container-fluid my-5">
+                <div class="row">
+                    <div class="col opacity-img">
+                        <img class="img-fluid" src="https://file.hstatic.net/200000033444/file/nut_bam_nam_d250de1dbb014e5b86fe3d9e714c59f6.jpg" alt="">
+                    </div>
+                    <div class="col opacity-img">
+                        <img class="img-fluid" src="https://file.hstatic.net/200000033444/file/nut_bam_nu_ae2efb4a50a64b5c8c87cab7edfe6e8e.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        {{!-- VIDEO --}}
+        <h5 class="text-center my-5 fs-4 text-uppercase">The gent wolf project</h5>
+        <div class="video ratio ratio-16x9 text-center">
+            <iframe src="https://www.youtube.com/embed/Z5G8oCwHmXI" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+</main>

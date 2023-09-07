@@ -1,0 +1,138 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+.text-size-sm {
+  font-size: 13px; }
+
+.text-hover {
+  color: black; }
+
+.text-hover:hover {
+  color: red; }
+
+.navbar {
+  transition: all 2s; }
+
+.navbar-scrolled {
+  background-color: white; }
+
+.dropdown:hover > .dropdown-menu {
+  display: block; }
+
+.dropdown > .dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+  pointer-events: none; }
+
+.card {
+  transition: all 0.3s; }
+
+.card:hover {
+  transform: scale(1.15);
+  opacity: 0.5; }
+
+.opacity-img:hover {
+  opacity: 0.5; }
+
+.screen-space {
+  margin-top: 10%; }
+
+.hr-dark {
+  border: 3px solid black; }
+
+.login-text-header {
+  width: max-content;
+  height: 40%;
+  position: relative;
+  margin: 100px auto; }
+
+.login-text-header::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  height: 4px;
+  width: 25%;
+  left: 0;
+  background-color: black; }
+
+.bg-brown {
+  accent-color: brown; }
+
+/* <![CDATA[ */
+.buttons_added {
+  opacity: 1;
+  display: inline-block;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  white-space: nowrap;
+  vertical-align: top; }
+
+.is-form {
+  overflow: hidden;
+  position: relative;
+  background-color: #f9f9f9;
+  height: 2.2rem;
+  width: 1.9rem;
+  padding: 0;
+  text-shadow: 1px 1px 1px #fff;
+  border: 1px solid #ddd; }
+
+.is-form:focus, .input-text:focus {
+  outline: none; }
+
+.is-form.minus {
+  border-radius: 4px 0 0 4px; }
+
+.is-form.plus {
+  border-radius: 0 4px 4px 0; }
+
+.input-qty {
+  background-color: #fff;
+  height: 2.2rem;
+  text-align: center;
+  font-size: 1rem;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-left: 0;
+  border-right: 0;
+  padding: 0; }
+
+.input-qty::-webkit-outer-spin-button, .input-qty::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+.holster {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: column;
+  gap: 0;
+  margin: 0;
+  padding: 0; }
+
+.container-pic {
+  width: 80%;
+  display: flex;
+  overflow: auto;
+  justify-content: flex-start;
+  flex: none; }
+
+.container-pic > div {
+  text-align: center;
+  scroll-snap-align: start;
+  flex: none; }
+
+/* scroll-snap */
+.x.mandatory-scroll-snapping {
+  scroll-snap-type: x mandatory; }
+
+.x.container > div {
+  line-height: 128px;
+  font-size: 64px;
+  width: 100%;
+  height: 128px; }
+
+.container-pic::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0; }

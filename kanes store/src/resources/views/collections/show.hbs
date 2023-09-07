@@ -1,0 +1,122 @@
+<div class="container-fluid screen-space">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="accordion accordion-flush pt-5" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Thông tin sản phẩm
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <ul class="text-size-sm">
+                                <li>Màu sắc: {{collection.color}}.</li>
+                                <li>Chất liệu da: {{collection.leatherMaterial}}.</li>
+                                <li>Chất liệu da lót: {{collection.soleLeatherMaterial}}.</li>
+                                <li>Chất liệu đế: {{collection.liningLeatherMaterial}}</li>
+                                <li>Độ cao gót: {{collection.heelHeight}}cm</li>
+                            </ul>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Chính sách bảo hành
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body text-size-sm">
+                        <ul>
+                            <li>Bảo hành trọn đời về các vấn đề bong tróc keo đế</li>
+                            <li>Miễn phí 3 lần vệ sinh đánh bóng giày (mang theo thẻ vệ sinh)</li>
+                            <li>Đổi hàng trong vòng 1 tuần nếu xảy ra vấn đề do nhà sản xuất
+                                <ul>
+                                    <li>Đổi hàng trong vòng 1 tuần nếu xảy ra vấn đề do nhà sản xuất</li>
+                                    <li>Trong trường hợp chưa mang lần nào, nhưng bị vấn đề về đế</li>
+                                </ul>
+                            </li>
+                            <li>Mua tại store hỗ trợ đổi hàng trong vòng 24h</li>
+                        </ul>  
+                    </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Chính sách đổi hàng
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body text-size-sm">
+                            <ul>
+                                <li>Hàng phải còn nguyên vẹn không có bất kì sự thay đổi nào</li>
+                                <li>Hàng khi đóng gói lại phải kèm túi hộp vẫn còn nguyên vẹn</li>
+                                <li>Phải điền đầy đủ thông tin để tránh thất lạc</li>
+                                <li>Mọi chi phí vận chuyển đổi size sẽ do bên mua chịu toàn bộ chi phí</li>
+                            </ul>
+                            LƯU Ý: Nếu lỗi nhà cung cấp chúng tôi sẽ chịu hoàn toàn chi phí
+                            * Liên hệ trực tiếp với chúng tôi để việc trao đổi trở nên dễ dàng hơn
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5 holster">
+            <div class="container-pic x mandatory-scroll-snapping">
+                <div class="img-fluid">
+                    <img src="{{collection.image1}}" class="card-img-top" alt="...">
+                </div>
+                <div class="img-fluid">
+                    <img src="{{collection.image2}}" class="card-img-top" alt="...">
+                </div>
+                <div class="img-fluid">
+                    <img src="{{collection.image3}}" class="card-img-top" alt="...">
+                </div>
+                <div class="img-fluid">
+                    <img src="{{collection.image4}}" class="card-img-top" alt="...">
+                </div>
+                <div class="img-fluid">
+                    <img src="{{collection.image5}}" class="card-img-top" alt="...">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <h4 class="text-uppercase">{{collection.name}}</h4>
+            <p class="text-uppercase">{{collection.colorEn}}</p>
+            <input class="btn-lg bg-brown" type="radio" checked>
+            <hr>
+            <p class="text-center fs-3 fw-bold">{{collection.price}}đ</p>
+            <div class="row">
+                <div class="col-md">
+                    <select class="form-select">
+                        <option>38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                </div>
+                <div class="col-md-auto">
+                    <div class="buttons_added">
+                        <input class="minus is-form" type="button" value="-">
+                        <input aria-label="quantity" class="input-qty" max="10" min="1" name="" type="number" value="1">
+                        <input class="plus is-form" type="button" value="+">
+                    </div>
+                </div>
+            </div>
+            <div class="d-grid gap-4 pt-4">
+                <button class="btn btn-outline-dark btn-lg rounded-pill" type="button">Thêm vào giỏ</button>
+            </div>
+            <div class="container border border-2 mt-4 pt-4 rounded-3 text-uppercase font-monospace">
+                <p><i class="bi bi-truck"></i><a href="" class="ms-4 text-decoration-none text-dark">Nhân viên gọi điện trực tuyến</a></p>
+                <p class="my-4 "><i class="bi bi-shield-check"></i><a href="" class="ms-4 text-decoration-none text-dark">Hệ thống cửa hàng</a> - <a href="" class="text-decoration-none text-dark fw-bold">Liên hệ</a></p>
+                <p class="my-4 "><i class="bi bi-bag-check"></i><a href="" class="ms-4 text-decoration-none text-dark">Hổ trợ đổi size - sán phẩm lỗi</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+

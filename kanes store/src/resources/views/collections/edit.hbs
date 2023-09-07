@@ -1,0 +1,58 @@
+<div class="container screen-space">
+    <form method="POST" action="/collections/{{collection._id}}?_method=PUT">
+        <div class="mb-3">
+            <label for="name" class="form-label">Tên sản phẩm</label>
+            <input type="text" class="form-control" value="{{collection.name}}" id="name" name="name">
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Giá</label>
+            <input type="text" class="form-control" value="{{collection.price}}" id="price" name="price">
+        </div>
+        <div class="mb-3">
+            <label for="image1" class="form-label">image 1</label>
+            <input type="text" class="form-control" value="{{collection.image1}}" id="image1" name="image1">
+        </div>
+        <div class="mb-3">
+            <label for="image2" class="form-label">image 2</label>
+            <input type="text" class="form-control" value="{{collection.image2}}" id="image2" name="image2">
+        </div>
+        <div class="mb-3">
+            <label for="image3" class="form-label">image 3</label>
+            <input type="text" class="form-control" value="{{collection.image3}}" id="image3" name="image3">
+        </div>
+        <div class="mb-3">
+            <label for="image4" class="form-label">image 4</label>
+            <input type="text" class="form-control" value="{{collection.image4}}" id="image4" name="image4">
+        </div>
+        <div class="mb-3">
+            <label for="image5" class="form-label">image 5</label>
+            <input type="text" class="form-control" value="{{collection.image5}}" id="image5" name="image5">
+        </div>
+        <div class="mb-3">
+            <label for="leatherMaterial" class="form-label">Chất liệu da</label>
+            <input type="text" class="form-control" value="{{collection.leatherMaterial}}" id="leatherMaterial" name="leatherMaterial">
+        </div>
+        <div class="mb-3">
+            <label for="soleLeatherMaterial" class="form-label">Chất liệu da lót</label>
+            <input type="text" class="form-control" value="{{collection.soleLeatherMaterial}}" id="soleLeatherMaterial" name="soleLeatherMaterial">
+        </div>
+        <div class="mb-3">
+            <label for="liningLeatherMaterial" class="form-label">Chất liệu đế</label>
+            <input type="text" class="form-control" value="{{collection.liningLeatherMaterial}}" id="liningLeatherMaterial" name="liningLeatherMaterial">
+        </div>
+        <div class="mb-3">
+            <label for="heelHeight" class="form-label">Độ cao gót</label>
+            <input type="text" class="form-control" value="{{collection.heelHeight}}" id="heelHeight"  name="heelHeight">
+        </div>
+        <div class="mb-3">
+            <label for="color" class="form-label">Màu sắc (VN)</label>
+            <input type="text" class="form-control" value="{{collection.color}}" id="color" name="color">
+        </div>
+        <div class="mb-3">
+            <label for="colorEn" class="form-label">Màu sắc (English)</label>
+            <input type="text" class="form-control" value="{{collection.colorEn}}" id="colorEn" name="colorEn">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Lưu lại</button>
+    </form>
+</div>
