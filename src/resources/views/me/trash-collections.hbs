@@ -64,6 +64,7 @@
         var deleteForm = document.forms['delete-collection-form'];
         var restoreForm = document.forms['restore-collection-form'];
         var btnDeleteCollection = document.getElementById('delete-collection-modal');
+        var btnDeleteSoftCollection = document.getElementById('btn-delete-collection');
         var restoreBtn = $('.btn-restore');
 
         //When dialog confirm clicked
@@ -74,10 +75,11 @@
                 
         });
       
-        btnDeleteCollection.onclick = function() {
+        btnDeleteSoftCollection.onclick = function() {
           deleteForm.action = '/collections/' + collectionId + '/force?_method=DELETE';
           deleteForm.submit();
         }
+
 
         restoreBtn.click(function(e){
           e.preventDefault();

@@ -1,0 +1,33 @@
+<div class="container-fluid screen-space pt-5">
+    <div class="row">
+        <div class="col fs-1 fw-bolder border-bottom">
+            <div class="my-5 login-text-header">Đăng ký</div>
+        </div>
+        
+        <div class="row col-lg-5 pb-5 border-start border-bottom">
+            <form method="POST" action="/register" class="my-5 form-group" id="login-form">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="name" class="form-control" id="name"  name="name">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="text" class="form-control" id="phone"  name="phone">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email"  name="email">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                </div>
+                {{!-- <div class="mb-3">
+                    <label for="password-input-again" class="form-label">Nhập lại password</label>
+                    <input type="password" class="form-control" id="password-input-again">
+                </div> --}}
+                <button type="submit" class="btn btn-outline-dark">Đăng ký</button>
+            </form>
+        </div>
+    </div>
+</div>

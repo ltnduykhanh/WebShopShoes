@@ -3,7 +3,8 @@ const router = express.Router()
 const siteController = require('../app/controllers/SiteController')
 
 
-router.get('/login', siteController.login)
+router.get('/contact', siteController.contact)
+router.get('/allproduct', siteController.showAllProduct)
 router.get('/', siteController.index)
 
 

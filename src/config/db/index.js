@@ -5,7 +5,7 @@ async function connect() {
         await mongoose.connect('mongodb://127.0.0.1/Kanes_shop_two');
         console.log('successfully!')
     } catch (error) {
-        console.log('thua')
+        console.log('faile to connect')
     }
 }
 

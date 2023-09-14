@@ -1,10 +1,9 @@
 <div class="header container-fluid fixed-top pt-2">
   <div class="container-fluid text-center">
-    <a href="/">
-        <img src="https://file.hstatic.net/200000033444/file/thewolf_logo-02_2dc5965c18574fc385769c4781e90d28.png" alt="" height="50">
+    {{!-- logo --}}
+    <a href="/home">
+        <img src="/img/logo2.png" alt="" height="50">
     </a>
-    {{!-- create --}}
-    {{!-- <a href="collections/create"><i class="bi bi-plus-circle-fill text-dark float-end ms-3 mt-4"></i></a> --}}
     {{!-- cart product --}}
     <a href=""><i class="bi bi-bag text-dark float-end ms-3 mt-4"></i></a>
     {{!-- Search --}}
@@ -26,12 +25,21 @@
       </div>
     </div>
     {{!-- Login icon --}}
-    <a href="/login"><i class="bi bi-person-circle text-dark float-end ms-3 mt-4"></i></a>
+    <a href="/users/show"><i class="bi bi-person-circle text-dark float-end ms-3 mt-4"></i></a>
   </div>
+  {{!-- Navbar --}}
   <div class="container text-uppercase"><nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
       <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
         <ul class="navbar-nav mb-2 mb-lg-0">
+
+          {{!-- TẤT CẢ SẢN PHẨM--}}
+          <li class="nav-item">
+              <a class="nav-link fs-6" href="/allproduct" role="button"  aria-expanded="false">
+                  Tất cả sản phẩm
+              </a>
+          </li>
+
           <!-- GIÀY NAM -->
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle fs-6" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -42,71 +50,15 @@
                 <li><a class="dropdown-item" href="#">Derby</a></li>
                 </ul>
             </li>
+
           <!-- GIÀY NỮ -->
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle fs-6" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Giày nữ
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </li>
-            <!-- COLLECTION -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle fs-6" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Collecion
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Tất cả sản phẩm</a></li>
-                    <li><a class="dropdown-item" href="#">Slide sandal</a></li>
-                    <li><a class="dropdown-item" href="#">The queen wolf</a></li>
-                    <li><a class="dropdown-item" href="#">The gent wolf</a></li>
-                    <li><a class="dropdown-item" href="#">The original wolf</a></li>
-                    <li><a class="dropdown-item" href="#">The sean wolf collections</a></li>
-                    <li><a class="dropdown-item" href="#">The mars wolf collections</a></li>
-                </ul>
-            </li>
-          <!-- PHỤ KIỆN -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle fs-6" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Phụ kiện
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </li>
-          <!-- TOTE BAG -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle fs-6" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Tote bag
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </li>
-          <!-- SHOES FOR DECOR -->
-            <li class="nav-item">
-                <a class="nav-link fs-6" href="#">Shoes for decor</a>
-            </li>
-          <!-- LỐI SỐNG ĐẸP -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle fs-6" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Lối sống đẹp
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item" href="#">Chelsea boot</a></li>
+                    <li><a class="dropdown-item" href="#">Derby</a></li>
                 </ul>
             </li>
           <!-- LIÊN HỆ -->
@@ -119,7 +71,6 @@
                     Another
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="collections/create">Tạo sản phẩm</a></li>
                     <li><a class="dropdown-item" href="/me/stored/collections">Sản phẩm của shop</a></li>
                 </ul>
             </li>

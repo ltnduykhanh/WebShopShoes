@@ -2,7 +2,7 @@ const Collection = require('../models/collections')
 const {mongooseToObject} = require('../../util/mongoose')
 
 class CollectionController {
-    // [GET] /colleciont/:slug
+    // [GET] /collection/:slug
     show(req, res, next) {
         Collection.findOne({slug : req.params.slug})
         .then(collection => 
@@ -14,9 +14,15 @@ class CollectionController {
         
     }
 
-    // [GET] /colleciont/create
+    // [GET] /collection/create
     create(req, res, next) {
         res.render('collections/create')
+        
+    }
+
+    // [GET] /collection/createCategory
+    createCategory(req, res, next) {
+        res.render('collections/createCategory')
         
     }
 

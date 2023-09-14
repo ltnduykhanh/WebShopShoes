@@ -3,6 +3,7 @@ const router = express.Router()
 const collectionController = require('../app/controllers/CollectionController')
 
 router.get('/create', collectionController.create)
+router.get('/createCategory', collectionController.createCategory)
 router.post('/store', collectionController.store)
 router.get('/:id/edit', collectionController.edit)
 router.put('/:id', collectionController.update)

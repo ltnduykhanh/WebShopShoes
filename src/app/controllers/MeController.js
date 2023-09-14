@@ -1,5 +1,6 @@
 const Collection = require('../models/collections')
 const {mutipleMongooseToObject} = require('../../util/mongoose');
+const User = require('../models/users')
 const { render } = require('node-sass');
 
 class MeController {

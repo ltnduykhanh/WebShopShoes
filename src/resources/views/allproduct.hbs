@@ -1,0 +1,18 @@
+<div class="container-fluid screen-space">
+    <div class="col">
+        <img class="img-fluid d-block w-100" src="/img/shoes-banner-6.jpg" alt="">
+    </div>
+    <div class="row">
+    {{#each collections}}
+        <div class="col-md-3 col-sm-4">
+            <div class="card border-0">
+                <a href="collections/{{this.slug}}"><img src="{{this.image1}}" class="card-img-top" alt="..."></a>
+                <div class="card-body text-center">
+                    <h5 class="text-uppercase">{{this.name}}</h5>
+                    <h5><b>{{this.price}}</b> đ</h5>
+                </div>
+            </div>
+        </div> 
+    {{/each}}
+  </div>
+</div>

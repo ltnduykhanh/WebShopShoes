@@ -13,9 +13,21 @@ class SiteController {
         .catch(error => next(error));
     }
 
-    // [GET] /login
-    login(req, res) {
-        res.render('login');
+    showAllProduct(req, res, next) {
+        Collection.find({})
+        .then(collections => {
+            res.render('allproduct', {
+                collections: mutipleMongooseToObject(collections)
+            })
+        })
+        .catch(error => next(error));
+    }
+
+
+    
+    //[GET]/ contact
+    contact(req, res) {
+        res.render('contact');
     }
 }
 

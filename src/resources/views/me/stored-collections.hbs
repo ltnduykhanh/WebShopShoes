@@ -1,6 +1,6 @@
 <div class="container screen-space">
     <h1>My collections</h1>
-    <p><a class="btn" href="/me/trash/collections"><i class="bi bi-trash"></i> Thùng rác</a></p>
+    <p><a class="btn" href="/collections/create"><i class="bi bi-plus-circle"></i> Tạo thêm sản phẩm</a></p>
     <table class="table">
         <thead>
             <tr>
@@ -32,6 +32,7 @@
             {{/each}}
         </tbody>
     </table>
+    <p><a class="btn" href="/me/trash/collections"><i class="bi bi-trash"></i> Thùng rác</a></p>
 </div>
 
 {{!-- Confirm delete collection --}}
@@ -78,10 +79,6 @@
 
                 
         })
-        /*$('#delete-collection-modal').on('show.bs.modal', function (event) {
-                var button = $(event.relatedTarget)
-                collectionId = button.data('id') 
-        });*/
       
         btnDeleteCollection.onclick = function() {
             deleteForm.action = '/collections/' + collectionId + '?_method=DELETE';

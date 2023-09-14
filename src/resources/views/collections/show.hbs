@@ -64,7 +64,28 @@
             </div>
         </div>
         <div class="col-sm-5 holster">
-            <div class="container-pic x mandatory-scroll-snapping">
+            {{!--  --}}
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="{{collection.image1}}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="{{collection.image2}}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="{{collection.image3}}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="{{collection.image4}}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="{{collection.image5}}" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
+            {{!--  --}}
+            {{!-- <div class="container-pic x mandatory-scroll-snapping">
                 <div class="img-fluid">
                     <img src="{{collection.image1}}" class="card-img-top" alt="...">
                 </div>
@@ -80,14 +101,14 @@
                 <div class="img-fluid">
                     <img src="{{collection.image5}}" class="card-img-top" alt="...">
                 </div>
-            </div>
+            </div> --}}
         </div>
         <div class="col-sm-4">
             <h4 class="text-uppercase">{{collection.name}}</h4>
             <p class="text-uppercase">{{collection.colorEn}}</p>
             <input class="btn-lg bg-brown" type="radio" checked>
             <hr>
-            <p class="text-center fs-3 fw-bold">{{collection.price}}đ</p>
+            <p class="text-center fs-3 fw-bold">{{collection.price}} đ</p>
             <div class="row">
                 <div class="col-md">
                     <select class="form-select">
