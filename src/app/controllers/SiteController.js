@@ -11,6 +11,19 @@ class SiteController {
             })
         })
         .catch(error => next(error));
+        // if(req.isAuthenticated()){
+        //     Collection.find({}).limit(3)
+        //     .then(collections => {
+        //         res.render('home', {
+        //             collections: mutipleMongooseToObject(collections)
+        //         })
+        //     })
+        //     .catch(error => next(error));
+        // }else{
+        //     res.redirect('/')
+        // }
+
+        
     }
 
     showAllProduct(req, res, next) {

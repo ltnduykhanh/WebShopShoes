@@ -1,10 +1,9 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
-const encrypt = require('mongoose-encryption');
+const passportLocalMongoose = require('passport-local-mongoose');
+
+
 const Schema = mongoose.Schema;
-// const slug = require('mongoose-slug-generator');
-// const slug = require('mongoose-slug-updater');
-// const mongooseDelete = require('mongoose-delete');
 
 const User = new Schema({
     name: {type: String, require: true},
@@ -15,13 +14,5 @@ const User = new Schema({
     timestamps:true,
   });
 
-User.plugin(encrypt, { secret: process.env.SECRET, encryptedFields: ['password'] });
-
-// mongoose.plugin(slug);
-
-// Collection.plugin(mongooseDelete, { 
-//   deletedAt: true,
-//   overrideMethods: 'all' 
-// })
-
+User.plugin(passportLocalMongoose);
 module.exports = mongoose.model('User', User);

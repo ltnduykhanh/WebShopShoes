@@ -1,7 +1,7 @@
 <div class="header container-fluid fixed-top pt-2">
   <div class="container-fluid text-center">
     {{!-- logo --}}
-    <a href="/home">
+    <a href="/">
         <img src="/img/logo2.png" alt="" height="50">
     </a>
     {{!-- cart product --}}
@@ -25,7 +25,7 @@
       </div>
     </div>
     {{!-- Login icon --}}
-    <a href="/users/show"><i class="bi bi-person-circle text-dark float-end ms-3 mt-4"></i></a>
+    <a href="/auth/:id/show"><i class="bi bi-person-circle text-dark float-end ms-3 mt-4"></i></a>
   </div>
   {{!-- Navbar --}}
   <div class="container text-uppercase"><nav class="navbar navbar-expand-lg navbar-light">
@@ -35,7 +35,7 @@
 
           {{!-- TẤT CẢ SẢN PHẨM--}}
           <li class="nav-item">
-              <a class="nav-link fs-6" href="/home/allproduct" role="button"  aria-expanded="false">
+              <a class="nav-link fs-6" href="/allproduct" role="button"  aria-expanded="false">
                   Tất cả sản phẩm
               </a>
           </li>

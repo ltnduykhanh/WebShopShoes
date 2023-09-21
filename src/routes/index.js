@@ -4,16 +4,16 @@ const collectionsRouter = require('./collections')
 const authRouter = require('./auth')
 
 function route(app) {
-
+    
     //me
     app.use('/me', meRouter)
     //collections
     app.use('/collections', collectionsRouter)
-    
-    //Home screen
-    app.use('/home', siteRouter)
     //authentication
-    app.use('/', authRouter)
+    app.use('/auth', authRouter)
+    //Home screen
+    app.use('/', siteRouter)
+
     
 }
 
